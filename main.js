@@ -65,3 +65,25 @@ while (i>10){
     i++
 };
 
+
+// Array Methods foreach, map, filter
+
+todos.forEach(function(todo){
+    console.log(todo.text);
+}); // Prints the text fields
+
+const todoText = todos.map( function(todo) {
+    return todo.text;
+}) // returns an array of all the texts
+
+const todoisCompleted = todos.filter(function(todo) {
+    return todo.isCompleted == true;
+})
+
+// merging two array methods
+
+const todoTextisCompleted = todos.map(function (todo) {
+    return todo.text;
+}. todos.filter(function(todo){
+    return todo.isCompleted == true;
+}))
