@@ -114,3 +114,17 @@ const color = c > 10 ? 'red' : 'blue'
 
 console.log(color);
 
+// Switches
+
+switch(color) {
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('The color is not known');
+
+}
+
