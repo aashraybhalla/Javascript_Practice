@@ -1,5 +1,7 @@
 console.log('Hello World!');
 
+// data types in javascript : string, numbers, boolean, null, undefined
+
 
 const person = {
 
@@ -82,8 +84,33 @@ const todoisCompleted = todos.filter(function(todo) {
 
 // merging two array methods
 
-const todoTextisCompleted = todos.map(function (todo) {
-    return todo.text;
-}. todos.filter(function(todo){
+const todoTextisCompleted = todos.filter(function (todo) {
     return todo.isCompleted == true;
-}))
+}).map(function (todo){
+    return todo.text;
+})
+
+console.log(todoTextisCompleted);
+
+
+// Conditionals
+
+const x = 10;
+const y = 20;
+
+if (x > 5 || y < 10) {
+    console.log('x is greater than 5 or y is less than 10')
+}
+
+if (x < 20 && y > 10){
+    console.log('x is less than 20 and y is greater than 10')
+}
+
+// Ternary Operator
+
+const c = 15;
+
+const color = c > 10 ? 'red' : 'blue'
+
+console.log(color);
+
