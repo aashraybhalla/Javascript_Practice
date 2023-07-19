@@ -1,6 +1,28 @@
-header {
+main{
+    display: grid;
+    grid-template-areas: 
+    "head head head"
+    "rside main lside"
+    "foot foot foot";
+
+    grid-template-rows: 10vh auto 10vh;
+}
+
+.header {
+    grid-area: head;
+    border-radius: 5px;
+    background: #c8c5c5;
     text-align: center;
-    background: #6d6c6c;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100px;
+}
+
+header{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    margin-top: 2vh;
+}
+
+.myForm{
+    grid-area: "main";
+    background: #efe9e9;
 }
