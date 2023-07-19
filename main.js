@@ -21,7 +21,47 @@ const person = {
 
 
 }
-console.log(person.name);
+console.log(person.name.firstName , person.name.lastName);
 console.log(person.age);
 console.log(person.Address);
 console.log(person.hobbies[1]);
+
+
+// Working with Arrays
+const todos = [
+    {
+        id : 1,
+        text : 'Take out trash',
+        isCompleted : true,
+    },
+    {
+        id : 2,
+        text : 'Complete Javascript Tutorial',
+        isCompleted : true,
+    },{
+        id : 3,
+        text : 'Watch a Movie',
+        isCompleted : false,
+    },
+]
+
+// console.log(todos[1].text) to print 'Complete javascript tutorial'
+
+// To convert into JSON format
+
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
+
+
+// Loops
+
+for(let i = 0; i<10 ; i++){
+    console.log(i);
+};
+
+let i = 0
+while (i>10){
+    console.log(i);
+    i++
+};
+
