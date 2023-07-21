@@ -8,23 +8,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main id="Page">
         <div class="header">
             <header>
-                Registeration Form 
+                <h4>Facebook Registeration Form</h4> 
             </header>
 
         </div>
 
         <section class="container">
-            <div class="myForm">
-                <form action="mailto: aashray81@icloud.com">
-                    Name:
-                    <input type="text" placeholder="Name" >
+            <div id="rForm">
+                <div id="formHeader">
+                    <h2 id="headerSignUp">Sign Up</h2>
+                    <p id="smHeader">It's quick and easy.</p>
+                </div>
+                <form action="mailto: aashray81@icloud.com" id="myForm">
+                    
+                    <input type="text" placeholder="First Name" id="fName"><input type="text" placeholder="Last Name" id="lName">
+                    <br>
+                    
+                    <input type="email" placeholder="Mobile number or Email Address" id="Email">
+                    <br>
+                    
+                    <input type="password" placeholder="Password" id="Password" >
+                    <br>
+
+                    <div id="dob">
+                        <h5 id="dobText">Date of Birth</h5>
+                    </div>
+                    <input type="date" name="Date of Birth" id="inputDob">
+
+                    <div id="gender">
+                        <h5 id="genderText">Gender</h5>
+                    </div>
+                    <span class="genderBox">
+                        <span class="genderRadio">
+                            <label for="gender-f">Female</label>
+                            <input type="radio" value="female" name="gender" id="gender-f">
+                        </span>
+                        <span class="genderRadio">
+                            <label for="gender-m">Male</label>
+                            <input type="radio" value="male" name="gender" id="gender-m">
+                        </span>
+                        <span class="genderRadio"> 
+                            <label for="gender-c">Custom</label>
+                            <input type="radio" value="custom" name="gender" id="gender-c">
+                        </span>
+                    </span>  
+
+                    <div id="signupdiv">
+                    <input type="button" value="SignUp" placeholder="SignUp" id="signupbtn">
+                    </div>
+                   
                 </form>
             </div>
 
         </section>
+
+        <footer>
+            <h4>
+                Links Of The Company
+            </h4>
+        </footer>
     </main>
     <script src="form.js"></script>
 </body>

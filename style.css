@@ -1,28 +1,188 @@
-main{
+#Page {
     display: grid;
-    grid-template-areas: 
-    "head head head"
-    "rside main lside"
-    "foot foot foot";
-
-    grid-template-rows: 10vh auto 10vh;
-}
-
-.header {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    grid-template-areas:
+      "head  head"
+      "main  main  "
+      "foot  foot";
+    grid-template-rows: 75px 1fr 75px;
+    grid-template-columns: 200px 1fr;
+  }
+  
+  #Page > .header {
     grid-area: head;
-    border-radius: 5px;
-    background: #c8c5c5;
+    background-color: #ffffff;
+    height: 100%;
+    margin: 10px;
+    padding-bottom: 40px;
+  }
+
+  h4{
+    text-align: center; color: rgb(13, 16, 19); 
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size: 30px;
+  }
+
+  /* #Page > nav {
+    grid-area: nav;
+    background-color: #ffa08c;
+  } */
+  
+  #Page > .container {
+    grid-area: main;
+    height: 100%;
+    background-color: #ffffff;
+    margin: 10px;
+  }
+
+  #formHeader{
+    width: 100%;
+    height: fit-content;
+    border-radius: 2px;
+    box-shadow: 0px 1px #e4e4e4;
+    background-color: #ffffff;
+  }
+
+  #headerSignUp{
+    padding-top: 16px;
+    padding-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
+
+  #smHeader{
+    padding-left: 16px;
+    padding-bottom: 10px;
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+
+  
+  #rForm{
+    width: 432px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 3px #dedede;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #myForm{
+    padding: 16px;
+    margin-top: -15px;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+  #fName , #lName{
+    display: inline;
+    width: 40%;
+    padding: 11px;
+    margin: 2.1%;
+    background-color: #f5f6f7;
+    border-radius: 3px;
+    border-color: #656565;
+    border-width: 1px;
+    transition: 0.3s;
+  }
+
+  #fName:hover , #lName:hover , #Email:hover , #Password:hover , .genderRadio{
+    background-color: rgb(237, 237, 237);
+  }
+
+
+  #Email , #Password , #inputDob {
+    width: 90%;
+    padding: 11px;
+    margin: 2%;
+    background-color: #f5f6f7;
+    border-radius: 3px;
+    border-color: #656565;
+    border-width: 1px;
+    transition: 0.3s;
+  }
+
+  #dob{
+    padding-left: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  #dobText{
+    font-weight: lighter;
+    padding: none;
+    margin: 0px;
+  }
+
+  #gender{
+    padding-left: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  #genderText{
+    font-weight: lighter;
+    padding: none;
+    margin: 0px;
+  }
+
+  .genderBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .genderRadio{
+    background-color: #f5f6f7;
+    border: 1px solid #656565;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: inline;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: fit-content;
+    margin: 2%;
+    padding: 11px;
+    transition: 0.3s;
+  }
+
+  #signupdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #signupbtn{
+    width: 200px;
+    height: 40px;
+    padding: 11px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(62, 178, 62);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    color: white;
     text-align: center;
-}
+    transition: 0.3s;
+  }
 
-header{
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    margin-top: 2vh;
-}
+  #signupbtn:hover{
+    background-color: rgb(13, 135, 27);
+  }
 
-.myForm{
-    grid-area: "main";
-    background: #efe9e9;
-}
+
+
+  #Page > footer {
+    grid-area: foot;
+    background-color: #ffffff;
+    padding: 10px;
+    height: 100%;
+    margin: 10px;
+  }
+  
