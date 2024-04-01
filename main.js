@@ -1,195 +1,57 @@
-// console.log('Hello World!');
+var prompt = require('prompt-sync')();
 
-// // data types in javascript : string, numbers, boolean, null, undefined
+// const age = prompt('What is your age? ');
 
-
-// const person = {
-
-//     name : {
-//     firstName : 'Aashray',
-//     lastName : 'Bhalla'
-//     },
-
-//     age : 20 ,
-
-//     Address : {
-//         houseNumber : '5B/33',
-//         street : 'Tilak Nagar',
-//         city : 'Delhi'
-
-//     },
-
-//     hobbies : ['Movies', 'Development', 'Travelling']
-
-
+// if (age < 18){
+//     console.log("You get a 20% discount");
 // }
-// console.log(person.name.firstName , person.name.lastName);
-// console.log(person.age);
-// console.log(person.Address);
-// console.log(person.hobbies[1]);
-
-
-// // Working with Arrays
-// const todos = [
-//     {
-//         id : 1,
-//         text : 'Take out trash',
-//         isCompleted : true,
-//     },
-//     {
-//         id : 2,
-//         text : 'Complete Javascript Tutorial',
-//         isCompleted : true,
-//     },{
-//         id : 3,
-//         text : 'Watch a Movie',
-//         isCompleted : false,
-//     },
-// ]
-
-// // console.log(todos[1].text) to print 'Complete javascript tutorial'
-
-// // To convert into JSON format
-
-// const todoJSON = JSON.stringify(todos);
-// console.log(todoJSON);
-
-
-// // Loops
-
-// for(let i = 0; i<10 ; i++){
-//     console.log(i);
-// };
-
-// let i = 0
-// while (i>10){
-//     console.log(i);
-//     i++
-// };
-
-
-// // Array Methods foreach, map, filter
-
-// todos.forEach(function(todo){
-//     console.log(todo.text);
-// }); // Prints the text fields
-
-// const todoText = todos.map( function(todo) {
-//     return todo.text;
-// }) // returns an array of all the texts
-
-// const todoisCompleted = todos.filter(function(todo) {
-//     return todo.isCompleted == true;
-// })
-
-// // merging two array methods
-
-// const todoTextisCompleted = todos.filter(function (todo) {
-//     return todo.isCompleted == true;
-// }).map(function (todo){
-//     return todo.text;
-// })
-
-// console.log(todoTextisCompleted);
-
-
-// // Conditionals
-
-// const x = 10;
-// const y = 20;
-
-// if (x > 5 || y < 10) {
-//     console.log('x is greater than 5 or y is less than 10')
+// else if(age >= 18 && age < 60){
+//     console.log("You get normal price");
+// }
+// else{
+//     console.log("You get a 30% discount");
 // }
 
-// if (x < 20 && y > 10){
-//     console.log('x is less than 20 and y is greater than 10')
+// var length = prompt('What is the length of the rectangle? ');
+// var breadth = prompt('What is the breadth of the rectangle? ');
+
+// const area = length * breadth;
+
+// console.log("The area of the rectangle is " + area);
+
+
+// function createProduct(name, price, inStock){
+//     this.name = name;
+//     this.price = price;
+//     this.inStock = inStock;
 // }
 
-// // Ternary Operator
+// let product1 = new createProduct('Laptop', 50000, true);
+// let product2 = new createProduct('Mobile', 20000, false);
+// let product3 = new createProduct('Tablet', 10000, true);
 
-// const c = 15;
+// if (product1.inStock){
+//     console.log("The product " + product1.name + " is available");
+// }
 
-// const color = c > 10 ? 'red' : 'blue'
-
-// console.log(color);
-
-// // Switches
-
-// switch(color) {
-//     case 'red':
-//         console.log('color is red');
-//         break;
-//     case 'blue':
-//         console.log('color is blue');
-//         break;
-//     default:
-//         console.log('The color is not known');
-
+// for (let key in product2){
+//     console.log(key, product2[key]);
 // }
 
 
-// // Functions
+let guestList = [];
 
-// function addNums(num1, num2) {
-//     return num1 + num2;
-// }
+guestList.push("A1");
+guestList.push("b1");
+guestList.push("c1");
+guestList.push("d1");
+guestList.push("e1");
 
-// console.log(addNums(5,7));
+var guestName = prompt("Enter the name of the Guest: ");
 
-
-// // Oops
-
-// // Constructor Function
-// // function Person(firstName, lastName, dob) {
-// //     this.firstName = firstName;
-// //     this.lastName = lastName;
-// //     this.dob = new Date(dob);
-// // }
-
-// // Person.prototype.getBirthYear = function() {
-// //     return this.dob.getFullYear();
-// // }
-
-// // Person.prototype.getFullName = function() {
-// //     return `${this.firstName} ${this.lastName}`;
-// // }
-
-// // // Instantiate Object
-// // const person1 = new Person('John', 'Doe', '12-3-2003');
-// // const person2 = new Person('Willian', 'Djovik', '12-8-2001');
-
-// // console.log(person2);
-// // console.log(person1.getFullName());
-
-
-// // Doing with "class" to avoid prototype method
-
-// class Person
-// { 
-//     constructor(firstName, lastName, dob)
-//     {
-
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//         this.dob = new Date(dob);
-//     }
-
-//     getBirthYear() 
-//     {
-//         return this.dob.getFullYear();
-//     }
-
-//     getFullName()
-//     {
-//         return `${this.firstName} ${this.lastName}`;
-//     }
-// }
-// // Instantiate Object
-// const person1 = new Person('John', 'Doe', '12-3-2003');
-// const person2 = new Person('Willian', 'Djovik', '12-8-2001');
-
-// console.log(person2);
-// console.log(person1.getFullName());
-
-
+if (guestList.includes(guestName)){
+    console.log("Welcome to the Party");
+}
+else{
+    console.log("Sorry you are not on the guest list!");
+}

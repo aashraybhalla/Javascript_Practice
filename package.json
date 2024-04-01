@@ -1,0 +1,16 @@
+{
+  "name": "javascript_practice",
+  "version": "1.0.0",
+  "description": "This is for practice",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "вум",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "prompt-sync": "^4.2.0",
+    "react": "^18.2.0"
+  }
+}
